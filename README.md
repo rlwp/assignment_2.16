@@ -4,39 +4,39 @@ Create a public github repository that has a terraform code, containing the answ
 Submission is the url to your public github repository.
 
 Explanation:
-Alarm Name:
+**Alarm Name:**
 
 alarm_name specifies a meaningful name for the alarm, e.g., LambdaErrorAlarm.
 
-Metric and Namespace:
+**Metric and Namespace:**
 
 The metric_name is "Errors", which corresponds to the error count for Lambda.
 
 The namespace should be "AWS/Lambda" for Lambda-related metrics.
 
-Dimensions:
+**Dimensions:**
 
 dimensions include the Lambda function name (FunctionName) to target the metrics for a specific Lambda function.
 
-Comparison & Threshold:
+**Comparison & Threshold:**
 
 comparison_operator determines the condition, e.g., "GreaterThanOrEqualToThreshold".
 
 threshold is the value at which the alarm is triggered, e.g., 1.
 
-Evaluation Periods:
+**Evaluation Periods:**
 
 Number of periods the metric must meet the condition, e.g., evaluation_periods = 1.
 
-Alarm Actions:
+**Alarm Actions:**
 
 Specify the action to take when the alarm is triggered, e.g., sending a notification to an SNS topic.
 
-Dependencies:
+**Dependencies:**
 
 The depends_on block ensures that the Lambda function exists before creating the alarm.
 
-Things to Customize:
+**Things to Customize:**
 Replace "YourLambdaFunctionName" with the actual Lambda function name.
 
 Update "your-region", "your-account-id", and "your-sns-topic" in alarm_actions.
